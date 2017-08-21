@@ -2,7 +2,7 @@
 
 pkgname=colord-s6serv
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc="colord service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -25,7 +25,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/colord.log.run" "$pkgdir/etc/s6-serv/available/classic/colord/log/run"
-	install -Dm 0644 "$srcdir/colord.logd" "$pkgdir/etc/s6-serv/log.d/serv/colord"
+	install -Dm 0644 "$srcdir/colord.logd" "$pkgdir/etc/s6-serv/log.d/colord"
 	
 	install -Dm 0644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/colord-s6serv/LICENSE"
 }
