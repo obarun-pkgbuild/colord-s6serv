@@ -1,0 +1,5 @@
+#!/usr/local/bin/execlineb -P
+fdmove -c 2 1
+s6-setuidgid colord
+exec -c
+/usr/lib/colord/colord -v
